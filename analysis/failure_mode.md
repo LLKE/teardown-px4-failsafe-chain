@@ -13,4 +13,4 @@
 + The actually selected action cannot run. 
 + The fallthrough chain falls through to the next, more severe action.
 + An action in the failsafe chain is not safe for one or more system failures.
-+ This leads to risky or dangerous behaviour if this is the action fallen back to.
++ This leads to risky or even dangerous behaviour if this is the action fallen back to.
