@@ -92,6 +92,8 @@ The drone takes off and the battery drains to the critical level, where RTL shou
 
 **Actual**: With a low battery, the drone climbs and holds, leading to the imminent risk of complete battery drain while at a significant altitude.
 
+See [media](media) for a a video of the experiment.
+
 ## Key Insight
 
 Safety critical mode selection must not rely on the implicit structure of a function. If this is the case, structure changes of this function, be they refactorings or additions of new modes, may silently violate this invariant without the compiler discovering this at build time. This invariant must be made explicit.
