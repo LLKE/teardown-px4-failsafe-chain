@@ -9,7 +9,7 @@ The failsafe handling involves the following files:
 
 This is where the failsafe chain is implemented, specifically in the function `getSelectedAction`.
 
-Apart from that, for a failsafe action to be propagated all the way to an actual flight mode involves a mapping function called `modeFromAction`
+Apart from that, a failsafe action to be propagated all the way to an actual navigation state involves a mapping function called `modeFromAction`
 
 **Failsafe**
 

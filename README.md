@@ -12,7 +12,7 @@ It focuses not on a specific bug, but on how change can silently break system in
 
 ## Executive Summary
 
-PX4 has a failsafe system, that ensures a safe handling of system failures (e.g. data link loss failures or battery failures). Possible handlings might be holding, return-to-launch or landing. Depending on the failure, a different action is chosen, which should ensure a safe behaviour. These actions have an escalating order of severity, and if one action cannot run for a given reason, the next more "severe" action is attempted to be performed. This failsafe action chain continues until an action is found that can be performed.
+PX4 has a failsafe system that ensures a safe handling of system failures (e.g. data link loss failures or battery failures). Possible handlings might be holding, return-to-launch or landing. Depending on the failure, a different action is chosen, which should ensure a safe behaviour. These actions have an escalating order of severity, and if one action cannot run for a given reason, the next more "severe" action is attempted to be performed. This failsafe action chain continues until an action is found that can be performed.
 
 This is implemented as a chain of falling-through switch-cases. If a new action is implemented, which can be performed in case of a certain system failure, and integrated into this falling through chain, this can be risky. The new action may be appropriate for some system failures, e.g. data link loss, but inappropriate for other system failures, like low battery. 
 
